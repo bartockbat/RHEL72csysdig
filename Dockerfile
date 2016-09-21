@@ -1,6 +1,6 @@
 FROM registry.access.redhat.com/rhel7.2:latest
 
-MAINTAINER Redhat - Glen Millard - <gmillard@redhat.com>
+MAINTAINER Redhat
 
 ENV SYSDIG_REPOSITORY stable
 
