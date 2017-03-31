@@ -9,10 +9,19 @@ ENV SYSDIG_REPOSITORY stable
 LABEL RUN="docker run -i -t -v /var/run/docker.sock:/host/var/run/docker.sock -v /dev:/host/dev -v /proc:/host/proc:ro -v /boot:/host/boot:ro -v /lib/modules:/host/lib/modules:ro -v /usr:/host/usr:ro --name glen_sysdigro --privileged=true rhel7/sysdig"
 
 #recommended LABELS for RHEL7 
-LABEL Name Sysdig/Csysdig
-LABEL Version sysdig version 0.10.1
-LABEL Vendor Sysdig
-LABEL Release Opensource Edition
+#LABEL Name Sysdig/Csysdig
+#LABEL Version sysdig version 0.10.1
+#LABEL Vendor Sysdig
+#LABEL Release Opensource Edition
+
+#recommended LABELS for RHEL7 
+LABEL name="Sysdig/Csysdig"
+LABEL version="sysdig version 0.10.1"
+LABEL vendor="Sysdig"
+LABEL release="Opensource Edition"
+
+#Atomic Help File
+COPY help.1 /help.1
 
 ENV SYSDIG_HOST_ROOT /host
 
